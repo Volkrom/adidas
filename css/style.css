@@ -121,8 +121,19 @@ h5 {font-size: 1.333rem;}
 
 small, .text_small {font-size: 0.75rem;}
 /* END TYPOGRAPHY */
+/* VARIABLES */
+:root {
+  --main_color: #f3f3f5;
+  --main_flex:flex;
+  --main_justify:space-between;
 
+  --main:flex,space-between,red;
+}
+/* END VARIABLES*/
 /* Global styles */
+a {
+  text-decoration: none;
+}
 .btn {
     padding: 8px 16px;
     color: #363636;
@@ -136,7 +147,7 @@ small, .text_small {font-size: 0.75rem;}
     margin-top: 2em;
 }
 section, header {
-    background-color: #f3f3f5;
+    background-color: var(--main_color);
 }
 .wrapper {
     width: 90%;
@@ -265,18 +276,23 @@ input[name="red"]:after {
 #searchQuerySubmit:hover {
   cursor: pointer;
 }
+
 .shopper {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
 .shop-grid {
-  background-color: #f3f3f5;
+  background-color: var(--main_color);
+  border-radius: 4px;
+  padding: 2em;
 }
 .side-nav {
+  display: var(--main_flex);
   flex-direction: column;
+  justify-content: var(--main_justify);
 }
 .side-nav a {
   text-decoration: none;
@@ -301,8 +317,22 @@ input[name="red"]:after {
   color: white;
   transition: 0.5s;
 }
-.side-nav a.loaded::after {
+.side-nav a.loaded::before {
   content: none;
+}
+.shop-grid-items {
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.gray {
+  color: #696969;
+}
+.gray:nth-child(1) {
+  margin-right: 1em;
 }
 /* END Main styles */
 

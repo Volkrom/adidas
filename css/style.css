@@ -221,11 +221,97 @@ nav a {
 input[name="red"]:after {
     background-color: tomato;
 }
+#header {
+  margin-top:0;
+}
+.shop {
+  padding: 4em 0 0 0;
+  background:linear-gradient(rgb(52 52 52 / 92%), rgba(0, 0, 0, 85%)), url(https://images.unsplash.com/photo-1576491110919-df70d852860f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+
+.searchBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#searchQueryInput {
+  width: 100%;
+    height: 2.8rem;
+    background: rgb(0 0 0 / 0%);
+    outline: none;
+    border-radius: 1.625rem;
+    padding: 0 3.5rem 0 1.5rem;
+    font-size: 1rem;
+    border: 1px solid white;
+    color: white;
+}
+::-webkit-input-placeholder {
+  color: white;
+}
+#searchQuerySubmit {
+  width: 3.5rem;
+  height: 2.8rem;
+  margin-left: -3.5rem;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#searchQuerySubmit:hover {
+  cursor: pointer;
+}
+.shopper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.shop-grid {
+  background-color: #f3f3f5;
+}
+.side-nav {
+  flex-direction: column;
+}
+.side-nav a {
+  text-decoration: none;
+  color: #696969;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin: 1em 0;
+  padding: 0 1em;
+  font-weight: 700;
+}
+.side-nav .loaded {
+  color: white;
+  letter-spacing: 12px;
+  font-size: 1.4em;
+  margin: 1.5em 0 ;
+}
+.side-nav a:hover:before {
+  content: '\2013  ';
+  transition: 0.2s;
+}
+.side-nav a:hover {
+  color: white;
+  transition: 0.5s;
+}
+.side-nav a.loaded::after {
+  content: none;
+}
 /* END Main styles */
 
 /* RESPONSIVE */
 @media only screen and (max-width: 600px) {
+  nav {
+    justify-content: space-between;
+    width: 100%;
+  }
   header {
     margin: 1em auto 0;
     padding: 1em;
@@ -233,7 +319,7 @@ input[name="red"]:after {
   .wrapper {
     padding: 1em;
   }
-  .main-nav {
+  .sec-nav, #line {
     display: none;
   }
   .big-txt {

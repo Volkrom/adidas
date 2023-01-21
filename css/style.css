@@ -221,4 +221,42 @@ nav a {
 input[name="red"]:after {
     background-color: tomato;
 }
+
 /* END Main styles */
+
+/* RESPONSIVE */
+@media only screen and (max-width: 600px) {
+  header {
+    margin: 1em auto 0;
+    padding: 1em;
+  }
+  .wrapper {
+    padding: 1em;
+  }
+  .main-nav {
+    display: none;
+  }
+  .big-txt {
+    font-size: 3.5em;
+  }
+  .hero {
+    height: 80vh;
+  }
+  .hero .big-txt {
+    top: 19%;
+}
+  .hero-copy {
+    position: relative;
+    right: 0;
+    bottom: 0;
+  }
+  .hero-copy p {
+    margin-bottom: 16px;
+  }
+  .hero-copy h4 {
+    font-size: 24px;
+  }
+  .btn-primary {
+    padding: 8px 16px;
+  }
+}
